@@ -10,23 +10,18 @@ def who_is_bigger(a, b, c)
   end
 end
 
-#def string
-#  string1 = "Tries this at Home, Kids"
-#  string2 = "Ponies loves carrots"
-#  string3 = "qwertyuiopasdfghjkl;zxcvbn"
-#  return string
-#end
-
 def reverse_upcase_noLTA(string)
-  string.reverse.upcase.delete("LTA")
+  reverse_upcase_noLTA = string.reverse.upcase.delete("LTA")
   return reverse_upcase_noLTA
 end
 
-def array_42
-  array_42.include?(42)
+def array_42(array)
+  array_42 = array.include?(42)
+  return array_42
 end
 
 def magic_array(array)
-  magic_array = array.flatten.sort.map{|i| i * 2}.delete{|j| j%3 == 0}.sort
+  magic_array = array.flatten.sort.map{|i| i * 2}.reject{|j| j%3 == 0}.sort #retirer les doubles d'un tableau
+  return magic_array
 end
 
